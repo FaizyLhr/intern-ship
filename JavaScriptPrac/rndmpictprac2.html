@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Render Task Prac 2</title>
+    <style>
+        img {
+            width: 250px;
+            height: 250px;
+        }
+
+        #d1 {
+            text-align: center;
+            margin: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="d1">
+        <button onclick="fun()">Render Pictures</button>
+    </div>
+    <div id="d2">
+        <img src="/JavaScriptPrac/ShuffleImg/p0.jpg" alt="Image Not Available!!!!!">
+        <img src="/JavaScriptPrac/ShuffleImg/p1.jpg" alt="Image Not Available!!!!!">
+        <img src="/JavaScriptPrac/ShuffleImg/p2.jpg" alt="Image Not Available!!!!!">
+        <img src="/JavaScriptPrac/ShuffleImg/p3.jpg" alt="Image Not Available!!!!!">
+        <img src="/JavaScriptPrac/ShuffleImg/p4.jpg" alt="Image Not Available!!!!!">
+        <img src="/JavaScriptPrac/ShuffleImg/p5.jpg" alt="Image Not Available!!!!!">
+        <img src="/JavaScriptPrac/ShuffleImg/p6.jpg" alt="Image Not Available!!!!!">
+        <img src="/JavaScriptPrac/ShuffleImg/p7.jpg" alt="Image Not Available!!!!!">
+        <img src="/JavaScriptPrac/ShuffleImg/p8.jpg" alt="Image Not Available!!!!!">
+        <img src="/JavaScriptPrac/ShuffleImg/p9.jpg" alt="Image Not Available!!!!!">
+    </div>
+
+
+    <script type="text/javascript">
+        fun = () => {
+            //Accessing all the Pics
+            let pics = document.getElementById("d2").children;
+            console.log(pics);
+
+            //Accessing the source of the pics
+            for (var i = 0; i < pics.length; i++) {
+                // console.log(pics[i].getAttribute('src'));
+                let getar = pics[i].src;
+                // console.log(getar);
+            }
+
+
+
+
+            // document.getElementById("d2").innerHTML = "";
+            let rndmindx = Math.floor((Math.random() * 10));
+            console.log(rndmindx);
+            let rndmnum = pics[(rndmindx)];
+            // console.log(rndmnum);
+            pics.splice(rndmindx, 1);
+            for (let i = 0; i < 10; i++) {
+
+                //     document.getElementById("d2").innerHTML += `
+                // <img src="/JavaScriptPrac/ShuffleImg/p${rndmindx}.jpg" width="200px" alt="Image Not Available!!!!!">
+                // `;
+            }
+
+
+
+
+
+        }
+
+    </script>
+
+</body>
+
+</html>

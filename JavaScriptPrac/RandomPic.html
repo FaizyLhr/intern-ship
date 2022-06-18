@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shuffle Pictures</title>
+    <style>
+        img {
+            width: 250px;
+            height: 250px;
+        }
+
+        #d1 {
+            text-align: center;
+            margin: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="d1">
+        <button onclick="rndrimg()">Render Pictures</button>
+    </div>
+    <div id="d2">
+        <img src="/JavaScriptPrac/ShuffleImg/p0.jpg" alt="Image Not Available!!!!!">
+        <img src="/JavaScriptPrac/ShuffleImg/p1.jpg" alt="Image Not Available!!!!!">
+        <img src="/JavaScriptPrac/ShuffleImg/p2.jpg" alt="Image Not Available!!!!!">
+        <img src="/JavaScriptPrac/ShuffleImg/p3.jpg" alt="Image Not Available!!!!!">
+        <img src="/JavaScriptPrac/ShuffleImg/p4.jpg" alt="Image Not Available!!!!!">
+        <img src="/JavaScriptPrac/ShuffleImg/p5.jpg" alt="Image Not Available!!!!!">
+        <img src="/JavaScriptPrac/ShuffleImg/p6.jpg" alt="Image Not Available!!!!!">
+        <img src="/JavaScriptPrac/ShuffleImg/p7.jpg" alt="Image Not Available!!!!!">
+        <img src="/JavaScriptPrac/ShuffleImg/p8.jpg" alt="Image Not Available!!!!!">
+        <img src="/JavaScriptPrac/ShuffleImg/p9.jpg" alt="Image Not Available!!!!!">
+    </div>
+    <script>
+        rndrimg = () => {
+
+            document.getElementById("d2").innerHTML = "";
+            for (let i = 0; i < 10; i++) {
+                let a = Math.floor((Math.random() * 9) + 1);
+                console.log(a);
+                document.getElementById("d2").innerHTML += `
+            <img src="/JavaScriptPrac/ShuffleImg/p${a}.jpg" width="200px" alt="Image Not Available!!!!!">
+            `;
+            }
+        }
+
+
+        tryfun = () => {
+
+            for (let p = 0; p < 10; p++) {
+                let b = Math.floor((Math.random() * (10 - 1)) + 1);
+                document.getElementById("d2").innerHTML = `
+            <img src="/JavaScriptPrac/ShuffleImg/p${b}.jpg" width="200px" alt="Image Not Available!!!!!">`;
+            }
+        }
+
+
+
+        rndrimg2 = () => {
+            let x = (document.getElementById("d2").children);
+            // for (let i = 0; i < x.length; i++) {
+            //     console.log(x[i]);
+            // }
+            // document.getElementById("d2").innerHTML = shuffle(x);
+
+
+            // console.log(y);
+            // document.getElementById("d2").innerText = Math.random() * (x[9] - x[0]) + x[0];
+            // Math.random();
+            console.log(x);
+        }
+
+
+
+        function shuffle(array) {
+            var currentIndex = array.length, temporaryValue, randomIndex;
+
+            // While there remain elements to shuffle...
+            while (0 !== currentIndex) {
+
+                // Pick a remaining element...
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex -= 1;
+
+                // And swap it with the current element.
+                temporaryValue = array[currentIndex];
+                array[currentIndex] = array[randomIndex];
+                array[randomIndex] = temporaryValue;
+            }
+
+            return array;
+        }
+    </script>
+
+</body>
+
+</html>

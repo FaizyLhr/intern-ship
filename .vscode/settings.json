@@ -1,0 +1,16 @@
+{
+	"editor.mouseWheelZoom": true,
+	"editor.wordWrap": "on",
+	"editor.formatOnSave": true,
+	"editor.formatOnPaste": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"workbench.colorCustomizations": {
+		"activityBar.background": "#310335",
+		"activityBar.foreground": "#fff",
+		"titleBar.activeBackground": "#48096d",
+		"titleBar.activeForeground": "#FEF9F5",
+		"titleBar.inactiveBackground": "#fff",
+		"titleBar.inactiveForeground": "#310335",
+		"panel.background": "#0d0846"
+	}
+}

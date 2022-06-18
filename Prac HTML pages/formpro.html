@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+        .clrdiv
+        {
+            clear: both;
+        }
+        a
+        {
+            text-decoration: none;
+            color: white;
+        }
+        #s1d1
+        {
+            width: 100%;
+        }
+        #s1d1 ul
+        {
+            display: flex;
+            list-style-type: none;
+        }
+        #s1d1 li
+        {
+            margin: 10px;
+            font-size: 30px;
+        }
+        #nav
+        {
+            
+            width: 100%;
+            background-color: rgba(74, 74, 230, 0.897);
+        }
+        #nav button
+        {
+            background-color: darkblue;
+            color: white;
+            height: 30px;
+            font-size: 20px;
+            width: auto;
+            margin: 1%;
+            margin-left: 60px;
+        }
+        #s3d1
+        {
+            width: 100%;
+        }
+        #s3 h1
+        {
+            margin-left: 20%;
+            font-size: 30px;
+            color: darkblue;
+        }
+        #s3d2
+        {
+            width: 100%;
+            display: flex;
+        }
+        form
+        {
+            margin: 1% 30% 1% 10%;
+            width: 100%;
+            font-size: 25px;
+        }
+        form div
+        {
+            margin-top: 01%;
+            flex: 1;
+        }
+        .inpt
+        {
+            text-align: left;
+            width: 40%;
+            flex: 1;
+            height: 30px;
+        }
+        select
+        {
+            width: 200px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+            height: 30px;
+
+        }
+        select option
+        {
+            text-align: center;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        #p1,#p2,#p3,#p4,#p5,#p6,#p7,#p8
+        {
+            display: flex;
+        }
+        #p1 div,#p2 div,#p3 div,#p4 div,#p4 div,#p5 div,#p6 div,#p7 div,#p8 div
+        {
+            flex: 1;
+        }
+        .chk
+        {
+            margin-right: 5%;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <section id="s1">
+        <div id="s1d1">
+            <ul>
+                <li><b>Contact</b></li>
+                <li style="border-left: 3px solid black; padding-left: 30px; color: blue;"><b>Add Contact</b></li>
+            </ul>
+        </div>
+    </section>
+    <section id="s2">
+        <div id="nav">
+            <button>Save</button>
+            <button>Save & Add Another </button>
+            <button><a href="/HomePage.html">Cancel</a></button>
+        </div>
+    </section>
+    <section id="s3">
+        <div id="s3d1">
+            <h1>
+                Add Contact Details
+            </h1>
+        </div>
+        <div id="s3d2">
+            <form action="/formpro.html">
+                <div id="p1">
+                    <div class="chk">
+                        <label class="lbl" for="name"><b>Name</b></label>
+                    </div>
+                    <div>
+                        <input id="name" class="inpt" type="text">
+                    </div>
+                </div>
+
+                <div class="clrdiv"></div>
+                
+                <div id="p2" >
+                    <div class="chk">
+                        <label class="lbl" for="company"><b>Company</b></label>
+                    </div>
+                    <div>
+                        <select name="Select Company" title="Select Company" class="inpt">
+                            <option value=""><b>PITS</b></option>
+                            <option value=""><b>Softix</b></option>
+                            <option value=""><b>Arfa</b></option>
+                        </select>
+                    </div>
+                        
+                </div>
+                
+                <div class="clrdiv"></div> 
+                
+                <div id="p3">
+                    <div class="chk">
+                        <label class="lbl" for="title"><b>Title</b></label>
+                    </div>
+                    <div>
+                        <input id="title" class="inpt" type="text">
+                    </div>
+                </div>
+                
+                <div class="clrdiv"></div>
+
+                <div id="p4">
+                    <div class="chk">
+                        <label class="lbl" for="Department"><b>Department</b></label>
+                    </div>
+                    <div>
+                        <input id="Department" class="inpt" type="text">
+                    </div>
+                </div>
+                
+                <div class="clrdiv"></div>
+                
+                <div id="p5">
+                    <div class="chk">
+                        <label class="lbl" for="pn"><b>Phone Number</b></label>
+                    </div>
+                    <div>
+                        <input id="pn" class="inpt" type="number">
+                        <label for="expn">ext.</label>
+                        <input id="expn" class="inpt" type="number">
+                    </div>
+                </div>
+
+                <div class="clrdiv"></div>
+                
+                <div id="p6">
+                    <div class="chk">
+                        <label class="lbl" for="mob"><b>Mobile</b></label>
+                    </div>
+                    <div>
+                        <input id="mob" class="inpt" type="number">
+                        <label for="exmob">ext.</label>
+                        <input id="exmob" class="inpt" type="number">
+                    </div>
+                </div>
+
+                <div class="clrdiv"></div>
+                
+                <div id="p7">
+                    <div class="chk">
+                        <label class="lbl" for="fax"><b>Fax</b></label>
+                    </div>
+                    <div>
+                        <input id="fax" class="inpt" type="number">
+                        <label for="exfax">ext.</label>
+                        <input id="exfax" class="inpt" type="number">
+                    </div>
+                </div>
+                
+                <div class="clrdiv"></div>
+
+                <div id="p8">
+                    <div class="chk">
+                        <label class="lbl" for="mail"><b>E-Mail Address</b></label>
+                    </div>
+                    <div>
+                        <input id="mail" class="inpt" type="email">
+                    </div>
+                </div>
+
+                <div class="clrdiv"></div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

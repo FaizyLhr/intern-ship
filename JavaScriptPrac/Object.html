@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Practice</title>
+    <script type="text/javascript">
+        //First Method to create Object
+        objcal = () => {
+            var obj = {
+                //properties defining
+                fnm: "faizy",
+                lnm: "Sheikh",
+                //funchion defining
+                show: () => {
+                    document.write("First name is : " + obj.fnm + "<br>" + "Last Name is :  " + obj.lnm + "");
+                },
+                //array defining
+                cook: ["zaki", "qasim", "zia"],
+                //object in object
+                frndlist: {
+                    first: "ali",
+                    second: "ahmed",
+                    arr: [1, 2, 3]
+                }
+            };
+            //property Calling
+            document.write(obj.fnm + "<br>");
+            document.write(obj.lnm + "<br>");
+            //function calling
+            document.write(obj.show() + "<br>");
+            //array calling
+            document.write(obj.cook + "<br>");
+            document.write(obj.cook[2] + "<br>");
+            //object in object is calling
+            document.write(obj.frndlist.first + "<br>");
+            document.write(obj.frndlist.arr + "<br>");
+            document.write(obj.frndlist.arr[2] + "<br>");
+
+            document.write(obj.show());
+        }
+
+        //Second Method to Create Object
+        secobjcal = () => {
+            //We can create a Dynamic Object
+            var person = new Object();
+
+            //Add dynamically Properties in Object
+            person.firnm = "Salman";
+            person.agge = 24;
+
+            //dynamically adding array
+            person.interest = ["cooking", "Cricket", "Football"];
+
+            //dynamically adding funchion
+            person.showall = () => {
+                document.write("First Name of dynamic object" + person.firnm + "<br>");
+                document.write("Age of dynamic object" + person.agge + "<br>");
+            }
+
+            //dynamically adding Object in Object
+            person.members = {
+                bro: "numan",
+                sis: "zuni",
+                mom: "sam"
+            }
+
+            //Calling All the properties and methods
+
+            //Calling Properties
+            document.write(person.firnm + "<br>");
+            document.write(person.agge + "<br>");
+            //Calling Array
+            document.write(person.interest[1] + "<br>");
+            //Calling Funchions
+            document.write(person.showall() + "<br>");
+            //Calling Object in Object
+            document.write(person.members.mom + "<br>");
+            document.write(person.members.bro + "<br>");
+            document.write(person.members.sis + "<br>");
+
+            //Another Way of Calling properties and methods
+            document.write(person['firnm'] + "<br>");
+        }
+
+        //Objects in Array
+        arrobj = () => {
+            //Creating Array having objects
+            var arrr = [
+                //First OBJ
+                {
+                    frnm: "zia", agi: 21, sex: "male"
+                },
+                //Second OBJ
+                {
+                    frnm: "faizy", agi: 22, sex: "male"
+                },
+                //Third OBJ
+                {
+                    frnm: "hamid", agi: 20, sex: "male"
+                }
+            ];
+
+            //Displaying Array
+            for (var i = 0; i < arrr.length; i++) {
+                document.write(arrr[i].frnm + "  " + arrr[i].agi + "  " + arrr[i].sex + "  " + "<br>");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="objcal()">First Method of Object Call</button>
+    <br><br>
+    <button onclick="secobjcal()">Second Method of Object Call</button>
+    <br><br>
+    <button onclick="arrobj()">Array of Objects</button>
+</body>
+
+</html>

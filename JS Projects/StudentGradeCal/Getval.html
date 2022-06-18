@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Dataa</title>
+    <style>
+        a
+        {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1">
+        Get Data from User!!!!!!!!
+    </h1>
+    <button type="submit" onclick="tranf()"><a href="/JS Projects/StudentGradeCal/StudentGradeCalculator.html">Click to enter your name</a>
+        
+    </button>
+    <p id="p1"></p>
+    <script>
+        function tranf()
+        {
+            var name;
+            var txt = prompt("Please enter your name:", "Harry Potter");
+            if (txt == null || txt == "") {
+                name = "User cancelled the prompt.";
+            } else {    
+                name = "Your Name is  " + txt + "";
+            }
+
+            // localStorage.setItem("Name",txt);
+            sessionStorage.setItem("Name",txt);
+
+            return;
+
+            // document.getElementById("p1").innerHTML = name;
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,221 @@
+#s1
+{
+    background-image: url('/AveSite/AveImages/bg-22.jpg');
+    min-height: 500px;
+    width: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.clr
+{
+    background-color: #0E305D;
+    font-size: 3%;
+    height: 70px;
+    width: 70px;
+}
+.iclr
+{
+  background-color: #0E305D;
+    font-size: 35px;
+    height: 70px;
+    width: 70px;
+}
+.ch
+{
+  font-size: 100%;
+  width: 180px;
+  font-weight: 700;
+  height: 15px;
+}
+.dh
+{
+  font-size: 120%;
+}
+.bh
+{
+    font-size: 330%;
+    font-weight: 700;
+}
+.navbar
+{
+    background-color: #0004;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card 
+{
+    background-color: transparent;
+    width: 100%;
+    height: 250px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner 
+  {
+    transform: rotateX(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back 
+  {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  /* Style the back side */
+  .flip-card-back 
+  {
+    background-color: #0E305D;
+    transform: rotateX(180deg);
+  }
+  #card1f
+  {
+    background-image: url("/AveSite/AveImages/fb-8.jpg");
+    /* background-position: center; */
+    background-size: cover;
+  }
+  .card-body button, .card-body h5
+  {
+    margin-top: 30%;
+  }
+  .card-body hr
+  {
+    color: white;
+  }
+  #card3f
+  {
+    background-image: url('/AveSite/AveImages/fb-10.jpg');
+    background-size: cover;
+  }
+  #card2f
+  {
+    background-image: url('/AveSite/AveImages/fb-9.jpg');
+    background-size: cover;
+  }
+  #s3
+  {
+    background-image: url('/AveSite/AveImages/bg-23.jpg');
+    min-height: 450px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 170px;
+    background-attachment: fixed;
+  }
+  #s3 div h1
+  {
+    font-family: 'barlow', sans-serif;
+    font-weight: 700px;
+    padding-top: 30%;
+  }
+  #s3d2
+  {
+    font-size: 20px;
+  }
+  .s3r
+  {
+    margin-top: 43%;
+    /* padding-top: 40%; */
+  }
+  #box
+  {
+    width: 80px;
+    height: 80px;
+    background-color: goldenrod;
+
+  }
+  #box i
+  {
+    font-size: 45px;
+  }
+  .tclr
+  {
+    color: #0E305D;
+    font-weight: 700;
+  }
+  #s5
+  {
+    background-image: url('/AveSite/AveImages/bg-24.jpg');
+    min-height: 400px;
+    background-size: cover;
+  }
+  .ov
+  {
+    background-color: #0009;
+    min-height: 400px;
+  }
+  .s5i
+  {
+    font-size: 50px;
+    font-weight: 700;
+    font-family: "basier square";
+    
+  }
+  .slide img
+  {
+    opacity: .2;
+  }
+  #s9
+  {
+    background-image: url('/AveSite/AveImages/bg-25.jpg');
+    min-height: 400px;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .boxe
+  {
+    min-height: 550px;
+    background-color: #E5E3DF;
+  }
+  .s11b
+  {
+    background-image: url('/AveSite/AveImages/bg-26.jpg');
+    min-height: 550px;
+    background-position: center;
+    background-size: cover;
+  }
+  .inputf
+  {
+    display: block;
+  }
+  #s12
+  {
+    background-image: url('/AveSite/AveImages/bg-27.jpg');
+    min-height: 400px;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  #ls ul
+{
+    list-style-type: none;
+    padding: 0%;
+}
+.con
+{
+    font-size: 20px;
+    
+}
+.bgc
+{
+  background-color: #161B27;
+}
+.lst
+{
+  font-size: 30px;
+}

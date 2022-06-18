@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Funchion</title>
+    <script type="text/javascript">
+        mapcal = () => {
+            //declaring array
+            var arr = ["ali", "hamid", "faizy"];
+            //declaring array of objects
+            var arr2 = [
+                {
+                    fnm: "faizy",
+                    sex: "male",
+                    age: 22
+                },
+                {
+                    fnm: "hamid",
+                    sex: "male",
+                    age: 20
+                },
+                {
+                    fnm: "zia",
+                    sex: "male",
+                    age: 23
+                },
+                {
+                    fnm: "sami",
+                    sex: "male",
+                    age: 22
+                }
+            ];
+
+            //using map funchion we can copy the existing string after doing some calculations
+            //for simple array
+            var copyarr = arr.map(shownm = (i) => {
+                document.write("First Name is :  " + "" + i + "<br>");
+            });
+            document.write("<br>");
+            document.write("<br>");
+
+            //for array of object
+            var copyarr2 = arr2.map(shownm = (i) => {
+                document.write("First Name is :  " + "" + i.fnm + "<br>");
+                document.write("Sex is :  " + "" + i.sex + "<br>");
+                document.write("Age  is :  " + "" + i.age + "<br>");
+                document.write("<br>");
+            });
+        }
+
+    </script>
+</head>
+
+<body>
+    <button onclick="mapcal()">Map Funchion</button>
+
+</body>
+
+</html>

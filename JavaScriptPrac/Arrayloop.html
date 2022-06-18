@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array using loop</title>
+</head>
+
+<body>
+    <p id="p1"></p>
+    <button onclick="funCall()">Click Me</button>
+    <button onclick="forinCall()">For in</button>
+
+    <br>
+    <script>
+        function forinCall() {
+            let obj = {
+                fname: "ali",
+                lname: "ahmed",
+                age: 12,
+                sex: "male"
+            };
+            for (x in obj) {
+                document.body.innerText += (obj[x]);
+            }
+        }
+        function funCall() {
+            let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+
+            for (let i = 0; i < arr.length; i++) {
+                document.getElementById("p1").innerText += arr[i];
+            }
+
+            document.getElementById("p1").innerText = "";
+
+            arr.forEach((element) => {
+                document.getElementById("p1").innerText += element;
+            });
+
+            document.getElementById("p1").innerText = "";
+
+            arr.forEach(arrcall);
+            function arrcall(e) {
+                console.log(e);
+                document.getElementById("p1").innerText += e;
+            }
+        }
+    </script>
+</body>
+
+</html>

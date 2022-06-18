@@ -1,0 +1,45 @@
+.top-banner {
+	background-color: rgb(241, 184, 195);
+}
+.bg {
+	background-image: url("../SaloonImages/bg-1.jpg");
+}
+.s2d {
+	font-family: sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+}
+.iconi {
+	color: red;
+}
+.btn {
+	background-color: #ff5353;
+}
+.sli {
+	height: 400px;
+}
+.date {
+	font-weight: bolder;
+	font-size: 20px;
+	color: red;
+}
+#ls {
+	background-color: #e9e2d8;
+}
+#ls ul {
+	list-style-type: none;
+	padding: 0%;
+}
+.con {
+	font-size: 20px;
+}
+.listi {
+	font-weight: bolder;
+}
+@media screen and (min-width: 550px) and (max-width: 780px) {
+	.listi {
+		font-size: 12px;
+		font-weight: bolder;
+	}
+}

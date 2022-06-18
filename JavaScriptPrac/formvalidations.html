@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validations</title>
+    <script type="text/javascript">
+        //funchion for regular expresssion checking
+        function regexchk() {
+            //Regular Expression Checking
+
+            // alert("chek");
+
+            var e = document.getElementById("regin").value;
+            //Simple 
+            var rege = /IT-/;
+            //case unsensitive
+            var rege2 = /IT-/i;
+            //include specific character
+            var reg3 = /[abc]abc0/;
+            //having rage
+            var reg4 = /[a-z]00/;
+            //having combination
+            var reg5 = /[a-zA-Z]00/;
+            //exluding some letter
+            var reg6 = /[^a-z]00/;
+            //range with decimal
+            var reg7 = /[a-zA-Z]{4}[0-9]{3}/;
+            //Using Words
+            //(\d) used for digits[0-9]
+            //(\w) used for Words[a-zA-Z0-9&-]
+            //(\s) used for Spaces and Tabs
+            //(\t) used for Tabs only
+
+            //range can also be defined using comma(,)
+            var reg8 = /\w{4}\d{3,20}/;
+
+            // (^) it defines the start of pattern
+            // ($) it defines the end of pattern
+            var reg9 = /^\w{4}\d{3}$/;
+
+            // for fixed values use (\char)
+            // to make length dynamic use plus (+)
+            var reg10 = /^[a-z\.@-]$/;
+
+            //to devide expressions into parts use ()brackets
+            var reg11 = /^([a-zA-Z0-9\.-]+)()()()$/;
+
+            //for email 
+            var reg11 = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9]+).([a-z]{2,8})(.[a-z]{2,8})?$/;
+
+
+
+
+
+            if (reg7.test(e)) {
+                alert("Expression chk Matched!!!!!");
+            }
+            else {
+                alert("Expression chk does not Match!!!!!");
+            }
+
+
+
+            // if (rege2.test(e)) {
+            //     alert("Expression Matched!!!!!");
+            // }
+            // else {
+            //     alert("Expression does not Match!!!!!");
+
+            // }
+        }
+        function validate() {
+            var a = document.getElementById("un");
+            var b = document.getElementById("pass");
+            var c = document.getElementById("lb1");
+            var d = document.getElementById("lb2");
+
+            //Validations
+            if (a.value.trim() == "" || b.value.trim() == "") {
+                if (a.value.trim() == "") {
+                    alert("Please enter the User Name!!");
+                    a.style.border = "solid 3px red";
+                    c.style.visibility = "visible";
+                }
+                else if (b.value.trim() == "") {
+                    alert("Please enter the Password!!");
+                    d.style.visibility = "visible";
+                    c.style.visibility = "hidden";
+                    b.style.border = "solid 3px red";
+                    a.style.border = "0px";
+                }
+                return false;
+            }
+            else if (b.value.trim().length < 5) {
+                alert("Password Length is too Short!!");
+                c.style.visibility = "hidden";
+                a.style.border = "0px";
+                d.style.visibility = "visible";
+                b.style.border = "solid 3px red";
+                return false;
+            }
+            else {
+                if (a.value == "faizy" && b.value == "123456") {
+                    return true;
+                }
+                else if (a.value != "faizy" || b.value != "123456") {
+                    if (a.value != "faizy") {
+                        alert("Username is Incorrect!!!!");
+                        c.style.visibility = "visible";
+                        b.style.border = "0px";
+                        a.style.border = "solid 3px red";
+                        return false;
+
+                    }
+                    else if (b.value != "123456") {
+                        alert("Password is Incorrect!!!!");
+                        d.style.visibility = "visible";
+                        c.style.visibility = "hidden";
+                        a.style.border = "0px";
+                        b.style.border = "solid 3px red";
+                        return false;
+                    }
+                    else {
+                        return false;
+                    }
+                }
+                else {
+                    return false;
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form onsubmit="validate()" action="msg.html">
+        <input id="un" type="text" placeholder="Enter User Name"><label id="lb1"
+            style="color: red; visibility: hidden;">Invalid</label>
+        <br><br>
+        <input id="pass" type="password" placeholder="Enter Password"><label id="lb2"
+            style="color: red; visibility: hidden;">Invalid</label>
+        <br><br>
+        <input type="submit">
+    </form>
+    <br><br>
+    <br>
+    <form action="msg.html">
+        <input id="regin" type="text" placeholder="Enter your Code">
+        <button onclick="regexchk()" type="button">Check Me</button>
+    </form>
+    <div>
+
+    </div>
+</body>
+
+</html>

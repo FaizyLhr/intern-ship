@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Dimensional Array</title>
+    <script type="text/javascript">
+        //alert("Alert!!!");
+        //var arr=new Array();
+
+        document.write(arr1[i] + " <br>");
+
+        function arraycall() {
+            //alert("Al");
+            var arr1 = [
+                ["ali", 18, "Male"],
+                ["faizy", 28, "Male"],
+                ["zia", 21, "Male"]
+            ];
+            for (var i = 0; i < 3; i++) {
+                for (var j = 0; j < 3; j++) {
+                    document.write(arr1[i][j] + "  ");
+                }
+                //alert("Show Value")
+                document.write("<br>");
+            }
+        }
+
+
+        function tabarray() {
+            var arr2 = [
+                ["hamid", 31, "july"],
+                ["fiza", 13, "jan"],
+                ["fahad", 11, "june"],
+                ["fahad", 11, "june"],
+                ["fahad", 11, "june"],
+                ["fahad", 11, "june"],
+            ];
+
+            document.write("<table border='1px' cellspacing='0px'>");
+            for (var i = 0; i < arr2.length; i++) {
+                document.write("<tr>");
+                for (var j = 0; j < arr2[i].length; j++) {
+                    document.write("<td>");
+                    document.write(arr2[i][j] + "  ");
+                    document.write("</td>");
+                }
+                document.write("<br>");
+                document.write("</td>");
+            }
+            document.write("</table>");
+        }
+
+        function arrmthd() {
+
+            //Array Methods
+            var ar = ["ai", 18, true, "Male"];
+
+            document.write(ar + "  <br>   ");
+
+            //Sorting Array
+            ar.sort();
+            document.write(ar + "  <br>   ");
+
+            //Reverse the Array
+            ar.reverse();
+            document.write(ar + "  <br>   ");
+
+            //Adding Value in Last
+            ar.push("July");
+            ar.push("Jazz");
+            document.write(ar + "  <br>   ");
+
+            //Removing Value from Last
+            ar.pop();
+            document.write(ar + "  <br>   ");
+
+            //Removing First Element
+            ar.shift();
+            document.write(ar + "  <br>   ");
+
+
+            //Adding Element at first index
+            ar.unshift("khalil");
+            document.write(ar + "  <br>   ");
+
+            //Adding custom character between array values
+            document.write("  <br><br><br>   ");
+            var cstm = ar.join("-");
+            document.write(cstm + "  <br>   ");
+            document.write("  <br><br><br>   ");
+
+
+            //concate two arrays by three methods
+            var m = [1, 2, 3];
+            var n = [4, 5];
+
+            //First Method
+            var o = m.concat(n);
+            document.write(o + "  <br> ");
+
+            //second Method
+            var k = m.concat("first,second");
+            document.write(k + "  <br>   ");
+
+            //third method
+            var l = m.concat(n);
+            document.write(l + "  <br>   ");
+
+            //merge multiple arrays
+            document.write("  <br>   ");
+            var o = m.concat(k, l, o);
+            document.write(o + "<br>");
+
+            //slice method 
+            //Getting some custom values from array
+            //slice(Starting Index,Ending Index)
+            //it will not print the ending index
+            //the string is stored in new array
+
+            var splicearr = ["ali", 1, true, 3, 67, 9, 3];
+            document.write("<br><br>" + splicearr + "<br>");
+
+            var getslice = splicearr.slice(2, 5);
+            document.write("<br><br>" + getslice + "<br>");
+            //if only starting index given it prints all on going array values
+            //we can print values using negative index
+            var getslice2 = splicearr.slice(-5, -1);
+            document.write("<br>" + getslice2 + "<br>");
+
+            //Splice fundhion
+            //Adding some values in the middle index
+            //changes are done in same array
+            var splicearr = ["ali", 1, 2, 3, 45, 6, 7, 8, false];
+            document.write(splicearr);
+            //splice(index, How many, Values)
+            //deleting 3 values
+            splicearr.splice(2, 3, "faiizy", 09, 87);
+            document.write("<br>" + splicearr + "<br>");
+            //only shifting values
+            splicearr.splice(2, 0, "faizan", 9);
+            document.write("<br>" + splicearr + "<br>");
+            //deleting some vaalue only
+            splicearr.splice(2, 3);
+            document.write("<br>" + splicearr + "<br>");
+
+            //Checking the datatype of array
+            //isArray()
+            var starr = ["latad", 2, 5, "faizy", 7, true];
+            var stng = "faizy";
+            var inte = 98;
+
+            //method //pass that array as parameter
+            var result = Array.isArray(starr);
+            document.write(result);
+            //Usage
+            if (Array.isArray(starr)) {
+                document.write("<br>" + "This is an array!!");
+            }
+            else {
+                document.write("<br>" + "This is not an array!!");
+
+            }
+
+            //check the index value
+            //array.indexOf("value", starting Position)
+            document.write("<br>" + starr.indexOf("faizy", 1));
+
+            //check the index value from reverse
+            //array.indexOf("value", starting Position)
+            document.write("<br>" + starr.lastIndexOf("faizy", 2));
+
+            //include //check some value is present or not
+            // var incchk=starr.in
+            document.write("<br>" + starr.includes("faizy"));
+
+
+
+
+        }
+        //document.write(arr1);
+    </script>
+</head>
+
+<body>
+    <button onclick="arraycall()">Show Array</button>
+    <br><br>
+    <button onclick="tabarray()">Show Data is tabular Form</button>
+    <br><br>
+    <button onclick="arrmthd()">Methods</button>
+
+</body>
+
+</html>

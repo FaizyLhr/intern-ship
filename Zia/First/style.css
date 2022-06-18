@@ -1,0 +1,17 @@
+.mhi {
+	vertical-align: middle;
+	border-style: none;
+	width: 20px;
+}
+@media only screen and (max-width: 500px) {
+	.customheading {
+		font-size: 20px;
+	}
+}
+#faizysec {
+	background-image: url("henry-chen-OF8MM3_Glrc-unsplash.jpg");
+	min-height: 400px;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+}

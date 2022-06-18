@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funchions</title>
+    <script>
+        //Basic Funchions
+        funbtn = () => {
+            var x = 1, y = 2;
+            var arr = [1, 2, 3, 5];
+            var obj = {
+                arr1: ["ali", "zia", "al"],
+                arr2: ["op", "pl"]
+            };
+            // varcal(x, y);//Funchion is not accessible
+            varcall(x, y);
+
+            arrcal(arr);
+
+            objcal(obj);
+
+            function objcal(obj) {
+                //displaying object 
+                alert(obj.arr1[3]);
+                alert(obj.arr1[1]);
+                alert(obj.arr2);
+                // alert(obj);//Object Can't be displayed alone
+            }
+
+
+            function arrcal(pasar) {
+                var cop = [];
+                for (var i = 0; i < arr.length; i++) {
+                    //copying array
+                    cop[i] = arr[i];
+                    //Displaying array
+                    document.getElementById("d1").innerHTML = cop;
+                }
+            }
+
+
+            function varcall(a, b) {
+                var total = a + b;
+                document.getElementById("d1").innerText = total;
+                document.getElementById("d2").innerHTML = total;
+            }
+
+
+            //Invalid Way
+            /*varcal = (a, b) => {//only accessible with in way
+                var total = a + b;
+                document.getElementById("d1").innerText = total;
+                document.getElementById("d2").innerHTML = total;
+            }*/
+        }
+
+        //Anonymous Funchions
+        //Funchion with out a Funchion Name
+        //Usually used when store in specfic variable
+        function anofun() {
+            var x = "ali", y = "ahmed";
+            var getfullname = function (x, y) { return x + "  " + y };
+            var getadd = function (x, y) { return x + y };
+
+            /* Calling funchion without allocating parameters will return
+            the defination of funchion*/
+            // alert(getfullname);
+
+            //Exact Method
+            var a=1;b=2;
+            alert(getfullname(x, y));
+            alert(getadd(a, b));
+        }
+
+        //Constructer Funchions
+        function confun(){
+            var calback=new Function("a","b","return a+b");
+            document.getElementById("d1").innerHTML=calback("Ali","Ahmed");
+            var a=calback(20,10);
+            alert(a);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+
+    <button onclick="funbtn()">Funchionss</button>
+    <button onclick="anofun()">Anonymous Funchion</button>
+    <button onclick="confun()">Constructer Funchion</button>
+
+</body>
+
+</html>

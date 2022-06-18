@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Directed</title>
+    <script type="text/javascript">
+        function Redirect() {
+            window.location = "https://www.tutorialspoint.com";
+        }
+
+        //Message displayed to users while redirecting
+        document.write("You will be redirected to main page in 10 sec.");
+        setTimeout('Redirect()', 10000);
+
+        //Browser Based Redirection
+        function brobsdrdrtn() {
+            var browsername = navigator.appName;
+            if (browsername == "Netscape") {
+                window.location = "https://uog.edu.pk/main.php";
+            } else if (browsername == "Microsoft Internet Explorer") {
+                window.location = "http://www.location.com/ie.htm";
+            } else {
+                window.location = "http://www.location.com/other.htm";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <p>Click the following button, you will be redirected to home page.</p>
+
+    <form>
+        <input type="button" value="Redirect Me" onclick="Redirect();" />
+    </form>
+
+</body>
+
+</html>

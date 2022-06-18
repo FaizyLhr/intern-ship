@@ -1,0 +1,17 @@
+
+.custom-rounded-pills > .btn{
+    border-radius: 30px;
+    width: 100px;
+    text-indent: 0%;
+    height: 40px;
+    opacity: 1;
+}
+.space-none button{
+    margin: 0 0 !important;
+}
+.space-none button:focus
+{
+    background-color: blue !important;
+    color: white !important;
+    box-shadow: none !important;
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>DOM Manipulation</title>
+		<script type="text/javascript">
+			function chk() {
+				var x = document.getElementById("t1").value;
+				// alert("The Username is :  "+ x);
+				var y = document.getElementById("pi").value;
+				// alert("The Password is :  "+ y);
+				if (x == "faizy" && y == "123") {
+					alert("Login Successfully!!!");
+				} else {
+					alert("Your User Name or Password is incorrect!!!!!!!!!!!!");
+				}
+				// alert("The Username is :  "+ x);
+				// alert("The Username is :  "+ x);
+				// alert("The Password is :  "+ y);
+			}
+			function btnclick() {
+				// alert("Button Clicked Meri Jaan!!!!!");
+
+				// document.getElementById("h").innerHTML="Text Written";
+
+				var a = document.getElementById("h").innerHTML;
+
+				alert(a);
+			}
+
+			function displaySelected() {
+				var q = document.getElementById("rd1");
+				var r = document.getElementById("rd2");
+
+				if (q.checked == true) {
+					alert("The Item  " + q.value + " is selected!!");
+				} else if (r.checked == true) {
+					alert("The Item  " + r.value + " is selected!!");
+				} else {
+					alert("None of the item is selected!!");
+				}
+			}
+
+			function slctfun() {
+				var slctedit = document.getElementById("slct");
+				alert(
+					"The Selected Item is :   " +
+						slctedit.options[slctedit.selectedIndex].value
+				);
+			}
+
+			function cstmstyle() {
+				var allpr = document.getElementsByTagName("p");
+				allpr[0].style.backgroundColor = "blue";
+				allpr[1].style.fontStyle = "italic";
+				allpr[2].style.fontWeight = "bold";
+				allpr[3].style.color = "purple";
+				allpr[4].style.fontSize = 22;
+			}
+
+			function cstmDesign() {
+				var pg = document.getElementsByClassName("cstmp");
+				for (var i = 0; i < pg.length; i++) {
+					pg[i].style.color = "blue";
+				}
+			}
+
+			function newimg() {
+				document.getElementById("im").src = "/JavaScriptPrac/img/zia.jpg";
+			}
+			function oldimg() {
+				document.getElementById("im").src = "/JavaScriptPrac/img/faizy.jpg";
+			}
+		</script>
+	</head>
+
+	<body>
+		<!-- <div>
+        <h2 id="h">
+            Click Button to Check Effect
+        </h2>
+        <Button onclick="btnclick()">
+            Click ME!
+        </Button>
+    </div> -->
+		<div>
+			<input type="text" id="t1" placeholder="Enter User Name" />
+			<br /><br />
+			<input type="password" id="pi" placeholder="Enter Passwprd" />
+			<br />
+			<br />
+			<button id="b2" onclick="chk()">Login</button>
+		</div>
+
+		<div>
+			<input type="radio" id="rd1" value="opt1" name="grp1" />opt 1<br />
+			<input type="radio" id="rd2" value="opt2" name="grp1" />opt 2 <br /><br />
+			<button onclick="displaySelected()">Display</button>
+		</div>
+		<br /><br />
+		<div>
+			<select name="" id="slct">
+				<option value="opt1">opt1</option>
+				<option value="opt2">opt2</option>
+				<option value="opt3">opt3</option></select
+			><br /><br />
+			<button onclick="slctfun()">Show</button>
+		</div>
+		<br /><br />
+		<div>
+			<p>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt eaque
+				excepturi sequi sapiente tempora at dolorum libero, magni esse, natus
+				voluptatibus, obcaecati labore inventore delectus ratione pariatur
+				cupiditate porro enim!
+			</p>
+			<p>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt eaque
+				excepturi sequi sapiente tempora at dolorum libero, magni esse, natus
+				voluptatibus, obcaecati labore inventore delectus ratione pariatur
+				cupiditate porro enim!
+			</p>
+			<p>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt eaque
+				excepturi sequi sapiente tempora at dolorum libero, magni esse, natus
+				voluptatibus, obcaecati labore inventore delectus ratione pariatur
+				cupiditate porro enim!
+			</p>
+			<p>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt eaque
+				excepturi sequi sapiente tempora at dolorum libero, magni esse, natus
+				voluptatibus, obcaecati labore inventore delectus ratione pariatur
+				cupiditate porro enim!
+			</p>
+			<p>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt eaque
+				excepturi sequi sapiente tempora at dolorum libero, magni esse, natus
+				voluptatibus, obcaecati labore inventore delectus ratione pariatur
+				cupiditate porro enim!
+			</p>
+			<br /><br />
+			<button onclick="cstmstyle()">Apply Styles</button>
+		</div>
+		<br /><br />
+		<div>
+			<p class="cstmp">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+				dolorem, in minus neque perferendis eos illo minima laboriosam atque
+				sapiente.
+			</p>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+				dolorem, in minus neque perferendis eos illo minima laboriosam atque
+				sapiente.
+			</p>
+			<p class="cstmp">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+				dolorem, in minus neque perferendis eos illo minima laboriosam atque
+				sapiente.
+			</p>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+				dolorem, in minus neque perferendis eos illo minima laboriosam atque
+				sapiente.
+			</p>
+			<p class="cstmp">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+				dolorem, in minus neque perferendis eos illo minima laboriosam atque
+				sapiente.
+			</p>
+			<h1 class="cstmp">Hello</h1>
+			<br />
+			<button onclick="cstmDesign()">Apply</button>
+		</div>
+		<br /><br />
+		<div>
+			<img
+				id="im"
+				onmouseover="newimg()"
+				onmouseout="oldimg()"
+				src="/JavaScriptPrac/img/faizy.jpg"
+				width="250px"
+				alt="Image Not Availiable!!!!!!!"
+			/>
+		</div>
+	</body>
+</html>

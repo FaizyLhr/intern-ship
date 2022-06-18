@@ -1,0 +1,10 @@
+console.clear();
+console.time('chktime is');
+console.log('Hello Console');
+console.log([34,1,87]);
+console.log({harry: 'this', marks:34});
+console.table({harry: 'this', marks:34});
+console.warn('Warning Practice');
+console.timeEnd('chktime is');
+console.assert(13>16,'Sorry 13 is less');
+console.error('Here Error Occured');

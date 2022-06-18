@@ -1,0 +1,24 @@
+.card-1{
+	  box-shadow: inset 5px 5px 5px rgb(0, 0, 0, 0.05),
+                inset -5px -5px 5px rgba(255, 255, 255, 0.5),
+                5px 5px 5px rgb(0, 0, 0, 0.05),
+                -5px -5px 5px rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    margin: 30px;
+}
+.box{
+    background-color: #ebf5fc;
+    box-shadow: 0 10px 20px rgb(0, 0, 0, 0.1);
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.containe .card-1:hover .box{
+    transform: translateY(-50px);
+    box-shadow: 0 10px 40px rgb(0, 0, 0, 0.2);
+    background: linear-gradient(45deg,#b95ce4,#4f29cd);
+}
+.card-1:hover{
+    background-color: #4f80ed;
+}
+    
+

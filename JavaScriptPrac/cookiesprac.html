@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies</title>
+    <script>
+
+        //Cookies Creation Practice
+        // document.cookie = "get=ali";
+        // document.cookie = "username=faizy;expires=Monday, 3-Sep-2021 09:00:00 UTC; path=/127.0.0.3; domain=faizy.com; secure";
+        // document.cookie = "username=chal; expires=Monday, 3-Sep-2021 09:00:00 UTC;  secure";
+        // document.cookie = "username=faizy; path=/127.0.0.1; domain=faizy.com; secure; max-age=" + 60 * 60 * 24 * 10;
+
+
+        var a = document.getElementById("i1").value;
+        var b = document.getElementById("i2").value;
+
+
+        //function to write Cookie in Google Chrome
+        function setcokie() {
+
+            document.cookie = "username=" + a + ";";
+            document.cookie = "email=" + b + ";";
+
+        }
+
+        //function to read cookies in Google Chrome
+        function getcokie() {
+
+            //splitting the inputs
+            var x = document.cookie.split(";");
+
+            //reading each cookie individually
+            for (var i = 0; i < x.length; i++) {
+                var y = x[i].split("=");
+                if (y[0].trim() == "name") {
+                    x = y[1];
+                }
+                if (y[0].trim() == "email") {
+                    x = y[1];
+                }
+            }
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <div>
+        <h1>
+            Cookie Session Practice!!!
+        </h1>
+        <input type="text" id="i1" placeholder="Enter User Name"><br><br>
+        <input type="text" id="i2" placeholder="Enter Email">
+        <br><br>
+        <input type="button" value="Set Cookies" onclick="setcokie()">
+        <input type="button" value="Set Cookies" onclick="getcokie()">
+
+
+
+    </div>
+
+</body>
+
+</html>

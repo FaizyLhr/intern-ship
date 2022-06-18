@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        .clrdiv
+        {
+            clear: both;
+        }
+        #s1d1
+        {
+            display: flex;
+            background-color: green;
+            width: 100%;
+            text-align: center;
+        }
+        #s1d1 img
+        {
+            width: 50px;
+            height: 50px;
+            margin: 5px 0px 5px 150px;
+        }
+        #s1d1 ul
+        {
+            list-style-type: none;
+            margin-left: 35%;
+            flex: 1;
+        }
+        #s1d1 li
+        {
+            flex: 1;
+            float: left;
+            font-size: 180%;
+            margin-left: 40px;
+        }
+        #s1d1 li:hover, #actv
+        {
+            border-radius: 3px;
+            background: chartreuse;
+        }
+        #s2d1
+        {
+            background-image: url(/HomeImages/bg1.png);
+            background-repeat: no-repeat;
+            height: 300px;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            color: white;
+        }
+        #s2d1p1
+        {
+            width: 50%;
+            height: 300px;
+            text-align: center;
+            font-size: 40px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        #s2d1p1 small
+        {
+            font-size: 20px;
+            color: seashell;
+        }
+        #s1d1btn
+        {
+            width: 150px;
+            height: 60px;
+            color: white;
+            background-color: black;
+            box-sizing: border-box;
+            font-size: 20px;
+        }
+        #s2d1p2
+        {
+            width: 50%;
+            height: 300px;
+            text-align: center;
+        }
+        #s2d1p2 img
+        {
+            margin-top: 25px;
+            width: 250px;
+            height: 250px;
+        }
+        #s3d1
+        {
+            width: 100%;
+            height: 600px;
+            text-align: center;
+        }
+        #s3d1
+        {
+            font-size: 35px;
+            padding-top: 0px;
+        }
+        #s3d2
+        {
+            display: flex;
+        }
+        #s3d3
+        {
+            display: flex;
+        }
+        #s3 img
+        {
+            flex: 1;
+            margin:2%;
+            width: 180px;
+            height: 180px;
+        }
+        #s4md
+        {
+            width: 100%;
+            height: 440px;
+            text-align: center;
+        }
+        #pt
+        {
+            font-size: 30px;
+            height: 34px;
+        }
+        #s4d1
+        {
+            display: flex;
+            flex: 1;
+            width: 100%;
+            height: 330px;
+        }
+        .s4p
+        {
+            flex: 1;
+            margin: 10px;
+        }
+        #s4bg1
+        {
+            background-image: url(/HomeImages/s4b1.png);
+            background-position: 100% 100%;
+            background-size: cover;
+            text-align: center;
+        }
+        #s4bg1 p,#s4bg2 p,#s4bg3 p
+        {
+            background-color: rgb(41, 38, 38,0.7);
+            width: 70%;
+            margin-top: 200px;
+            margin-left: 67px;
+            color: white;
+            font-size: 30px;
+        }
+        #s4bg2
+        {
+            background-image: url(/HomeImages/s4b2.png);
+            background-position: 100% 100%;
+            background-size: cover;
+            background-position: center;
+        }
+        #s4bg3
+        {
+            background-image: url(/HomeImages/s4b3.png);
+            background-position: 100% 100%;
+            background-size: cover;
+        }
+        #s5md
+        {
+            display: flex;
+            flex: 1;
+            width: 100%;
+            height: 200px;
+            text-align: center;
+        }
+        #s5d1
+        {
+            width: 25%;
+            height: 200px;
+        }
+        #s5d1 ul,#s5d2 ul
+        {
+            list-style-type: none;
+        }
+        #s5d2
+        {
+            width: 25%;
+            height: 200px;
+        }
+        #s5d4
+        {
+            width: 25%;
+            height: 200px;
+            
+            text-align: center;
+        }
+        .icons
+        {
+            font-size: 15px;
+        }
+        .icons .fab
+        {
+            margin-left: 15px;
+            padding: 5px;
+            color: white;
+            border:none;
+        }
+        #s5d4btn
+        {
+            margin: 50px 50px;
+            display: flex;
+        }
+        #s5d4btn button
+        {
+            flex: 1;
+            margin-left: 20px;
+            width: 100px;
+            font-size: 25px;
+        }
+        #s5nd
+        {
+            text-align: center;
+            padding-bottom: 5px;
+        }
+        #s5
+        {
+            background-color: gray;
+        }
+        #s5d3
+        {
+            display: flex;
+            flex-direction: column;
+            width: 25%;
+            height: 200px;
+        }
+        .s5d3p1
+        {
+            margin-left: 40px;
+            display: flex;
+            text-align: center;
+        }
+        #s5d3 img
+        {
+            height: 50px;
+            width: 50px;
+        }
+        .d1
+        {
+            width: 30%;
+        }
+        .d2
+        {
+            text-align: left;
+            font-size: 20px;
+            padding: 0%;
+            margin-top: 10px;
+            width: 70%;
+            height: 70px;
+        }
+        a
+        {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <!-- Section 1 About Navigation Section starts Here -->
+    <section id="s1">
+        <div id="s1d1">
+            <img src="/HomeImages/logo.png" alt="Picture not Availiable!!!!">
+            <ul>
+                <b>
+                    <li id="actv">Home</li>
+                    <li><a href="/table.html">Details</a></li>
+                    <li><a href="/formpro.html">Add Contact</a></li>
+                    <li>Login</li>
+                </b>
+            </ul>
+        </div>
+        <div class="clrdiv"></div>
+    </section>
+    <div class="clrdiv"></div>
+    <!-- Section 2 About Main Introduction -->
+    <section id="s2">
+        <div id="s2d1">
+            <div id="s2d1p1">
+                <p><b>
+                    <small>
+                        Professional Web Developer <br>
+                    </small>
+                    Our mission is to provide Quality Services!! 
+                </b></p>
+                <button id="s1d1btn"><b>
+                    Click Here!!
+                </b></button>
+            </div>
+            <div id="s2d1p2">
+                <img src="/HomeImages/girlpic.png" alt="Picture Not Availiable!!!">                
+            </div>
+            <div class="clrdiv"></div>
+        </div>
+    </section>
+    <div class="clrdiv"></div>
+    <!-- Section 3 Showing Some Relative Work Images -->
+    <section id="s3">
+        <div id="s3d1">
+            <p><b>
+                Muhammad Feezan
+            </b></p>
+            <div id="s3d2">
+                <img src="/HomeImages/s3g1.png" alt="Picture Not Availiable!!!">
+                <img src="/HomeImages/s3g2.png" alt="Picture Not Availiable!!!">
+                <img src="/HomeImages/s3g3.png" alt="Picture Not Availiable!!!">
+                <img src="/HomeImages/s3g4.png" alt="Picture Not Availiable!!!">
+            </div>
+            <div id="s3d3">
+                <img src="/HomeImages/s3g5.png" alt="Picture Not Availiable!!!">
+                <img src="/HomeImages/s3g6.png" alt="Picture Not Availiable!!!">
+                <img src="/HomeImages/s3g7.png" alt="Picture Not Availiable!!!">
+                <img src="/HomeImages/s3g8.png" alt="Picture Not Availiable!!!">
+            </div>
+        </div>
+        <div class="clrdiv"></div>
+    </section>
+    <div class="clrdiv"></div>
+    <!-- Section 4 About Other Availiable Developers -->
+    <section id="s4">
+        <div id="s4md">
+            <p id="pt"><b>
+                Other Developers Availiable Here!!
+            </b></p>
+            <div id="s4d1">
+                <div class="s4p" id="s4bg1">
+                    <p >
+                        <b>
+                            Zia Ul Hassan <br> Web Developer
+                        </b>
+                    </p>
+                </div>
+                <div class="s4p" id="s4bg2">
+                    <p>
+                        <b>
+                            Hamid Raza <br> WordPress Developer
+                        </b>
+                    </p>
+                </div>
+                <div class="s4p" id="s4bg3">
+                    <p>
+                        <b>
+                            Arslan <br> Game Developer
+                        </b>
+                    </p>
+                </div>
+            </div>
+            <div class="clrdiv"></div>
+        </div>
+    </section>
+    <div class="clrdiv"></div>
+    <!-- Section 5 is Footer-->
+    <section id="s5">
+        <div id="s5md">
+            <div id="s5d1">
+                <h1>What's new</h1>
+                <ul>
+                    <li>
+                        <h4>
+                            Surface Duo
+                        </h4>
+                    </li>
+                    <li>
+                        <h4>
+                            Surface Pro X
+                        </h4>
+                    </li>
+                    <li>
+                        <h4>
+                            Microsoft 365
+                        </h4>
+                    </li>
+                </ul>
+            </div>
+            <div id="s5d2">
+                <h1>
+                    <b>
+                        Education
+                    </b>
+                </h1>
+                <ul>
+                    <li><h4>Office for students</h4></li>
+                    <li><h4>Deals for students & parents</h4></li>
+                    <li><h4>Microsoft Azure in education</h4></li>
+                </ul>
+            </div>
+            <div id="s5d3">
+                <h1>Company Employees</h1>
+                <div class="s5d3p1">
+                    <div class="d1">
+                        <img style="border-radius: 50%;" src="/HomeImages/s5d3i1.png" alt="Picture Not Availiable">
+                    </div>
+                    <div class="d2">
+                        <b>
+                            Ali
+                        </b>
+                    </div>
+                </div>
+                <div class="s5d3p1">
+                    <div class="d1">
+                        <img src="/HomeImages/s5d3i2.png" alt="Picture Not Availiable">
+                    </div>
+                    <div class="d2">
+                        <b>
+                            Zakki
+                        </b>
+                    </div>
+                </div>
+            </div>
+            <div id="s5d4">
+                <div id="s5d4btn">
+                    <button>Btn 1 </button>
+                    <button>Btn 2</button>
+                </div>
+                <div class="icons">
+                    <i style="background-color: #4267B2;" class="fab fa-facebook-f"></i>
+                    <i style="background-color: rgb(0, 172, 238);" class="fab fa-twitter"></i>
+                    <i style="background-color: #569e1b;" class="fab fa-whatsapp"></i>
+                    <i style="background-color: blue;" class="fab fa-facebook-messenger"></i>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div id="s5nd">
+            <h1 id="s6h1">
+                @ All Wrights are Reserved
+            </h1>   
+    </section>
+</body>
+</html>

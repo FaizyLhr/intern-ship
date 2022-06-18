@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country Task</title>
+    <style>
+      .container {
+        margin-top: 200px;
+        margin-left: 150px;
+      }
+
+      .f-group {
+        float: left;
+      }
+
+      .f-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-family: "roboto";
+        font-weight: 500;
+      }
+      select {
+        padding: 0 15px;
+        height: 40px;
+        width: 200px;
+        border: 1px solid black;
+        margin-right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="f-group">
+        <label for=""> Country </label>
+        <select name="slct1" id="slct1" onchange="populate(this.id,'slct2')">
+          <option value="">-- Choose Country</option>
+          <option value="pakistan">Pakistan</option>
+          <option value="india">India</option>
+          <option value="USA">USA</option>
+          <option value="china">China</option>
+        </select>
+      </div>
+      <div class="f-group">
+        <label for="">Province</label>
+        <select
+          name="slct2"
+          id="slct2"
+          onchange="populates(this.id,'slct3')"
+        ></select>
+      </div>
+      <div class="f-group">
+        <label for="">City</label>
+        <select name="slct3" id="slct3"></select>
+      </div>
+    </div>
+
+    <script>
+      function populate(s1, s2) {
+        var s1 = document.getElementById(s1);
+        var s2 = document.getElementById(s2);
+
+        s2.innerHTML = "";
+
+        if (s1.value == "pakistan") {
+          var optionArray = [
+            "--select|--Select",
+            "punjab|Punjab",
+            "sindh|Sindh",
+            "sarhad|Sarhad",
+            "balochistan|Balochistan",
+          ];
+        } else if (s1.value == "india") {
+          var optionArray = [
+            "--select|--Select",
+            "delhi|Delhi",
+            "mumbai|Mumbai",
+            "bangalore|Bangalore",
+            "hyderabad|Hyderabad",
+          ];
+        } else if (s1.value == "USA") {
+          var optionArray = [
+            "--select|--Select",
+            "alabama|Alabama",
+            "colorado|Colorado",
+            "florida|Florida",
+            "hawaii|Hawaii",
+          ];
+        } else if (s1.value == "china") {
+          var optionArray = [
+            "--select|--Select",
+            "fujian|Fujian",
+            "beijing|Beijing",
+            "jilin|Jilin",
+            "henan|Henan",
+          ];
+        }
+
+        for (var option in optionArray) {
+          var pair = optionArray[option].split("|");
+          var newOption = document.createElement("option");
+
+          newOption.value = pair[0];
+          newOption.innerHTML = pair[1];
+          s2.options.add(newOption);
+        }
+      }
+
+      function populates(s1, s2) {
+        var s1 = document.getElementById(s1);
+        var s2 = document.getElementById(s2);
+
+        s2.innerHTML = "";
+
+        if (s1.value == "punjab") {
+          var optionArray = [
+            "--select|--Select",
+            "gujranwala|Gujranwala",
+            "lahore|Lahore",
+            "gujrat|Gujrat",
+          ];
+        } else if (s1.value == "sindh") {
+          var optionArray = [
+            "--select|--Select",
+            "kemari|Kemari",
+            "karachi|Karachi",
+            "malir|Malir",
+          ];
+        } else if (s1.value == "sarhad") {
+          var optionArray = [
+            "--select|--Select",
+            "mardan|Mardan",
+            "swat|Swat",
+            "bannu|Bannu",
+          ];
+        } else if (s1.value == "balochistan") {
+          var optionArray = [
+            "--select|--Select",
+            "awaran|Awaran",
+            "bolan|Bolan",
+            "gwadar|Gwadar",
+          ];
+        } else if (s1.value == "delhi") {
+          var optionArray = [
+            "--select|--Select",
+            "shahdara|Shahdara",
+            "alipur|Alipur",
+            "kapashera|Kapashera",
+          ];
+        } else if (s1.value == "mumbai") {
+          var optionArray = [
+            "--select|--Select",
+            "dahisar|Dahisar",
+            "andheri|Andheri",
+            "Goregaon|Goregaon",
+          ];
+        } else if (s1.value == "bangalore") {
+          var optionArray = [
+            "--select|--Select",
+            "jayanagar|Jayanagar",
+            "padmanabhanagar|Padmanabhanagar",
+            "girinagar|Girinagar",
+          ];
+        } else if (s1.value == "hyderabad") {
+          var optionArray = [
+            "--select|--Select",
+            "dadu|Dadu",
+            "jamshoro|Jamshoro",
+            "matiari|Matiari",
+          ];
+        } else if (s1.value == "alabama") {
+          var optionArray = [
+            "--select|--Select",
+            "mobile bay|Mobile Bay",
+            "black belt|Black Belt",
+            "birmingham|Birmingham",
+          ];
+        } else if (s1.value == "colorado") {
+          var optionArray = [
+            "--select|--Select",
+            "denver|Denver",
+            "springs|Springs",
+            "aurora|Aurora",
+          ];
+        } else if (s1.value == "florida") {
+          var optionArray = [
+            "--select|--Select",
+            "jacksonville|Jacksonville",
+            "miami|Miami",
+            "tampa|Tampa",
+          ];
+        } else if (s1.value == "hawaii") {
+          var optionArray = [
+            "--select|--Select",
+            "pearl|Pearl",
+            "honolulu|Honolulu",
+          ];
+        } else if (s1.value == "fujian") {
+          var optionArray = [
+            "--select|--Select",
+            "pingtan|Pingtan",
+            "fuqing|Fuqing",
+            "siming|Siming",
+          ];
+        } else if (s1.value == "beijing") {
+          var optionArray = [
+            "--select|--Select",
+            "chongqing|Chongqing",
+            "tianjin|Tianjin",
+            "shanghai|Shanghai",
+          ];
+        } else if (s1.value == "jilin") {
+          var optionArray = [
+            "--select|--Select",
+            "antú|Āntú",
+            "báichéng|Báichéng",
+            "báishān|Báishān",
+          ];
+        } else if (s1.value == "henan") {
+          var optionArray = [
+            "--select|--Select",
+            "anyang|Anyang",
+            "hebi|Hebi",
+            "jiaozuo|Jiaozuo",
+          ];
+        }
+
+        for (var option in optionArray) {
+          var pair = optionArray[option].split("|");
+          var newOption = document.createElement("option");
+
+          newOption.value = pair[0];
+          newOption.innerHTML = pair[1];
+          s2.options.add(newOption);
+        }
+      }
+    </script>
+  </body>
+</html>

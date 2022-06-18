@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+        .a
+        {
+            padding-left: 1350px;
+        }
+    </style>
+</head>
+<body>
+    <form style="margin: 250px; margin-left: 450px;" action="https://www.google.com">
+       <label for="fn">First Name :</label>  <input type="Text" id="fn" value=""><br><br>
+        <label for="ln">Last Name  :</label> <input type="text" id="ln" value=""><br><br>
+        <label for="pass">Password   :</label>     <input type="password" value="" name="" id="pass"><br><br>
+        <label for="pn"> Phone Number:</label> <input type="number" value="" name="" id="pn"><br><br>
+        <input type="radio" name="gender" id="Male"> <label for="Male">Male</label>
+                      <input type="radio" name="gender"  id="Female"> <label for="Female"> Female </label> 
+                      <input type="radio" name="gender"  id="nd"> <label for="nd"> Not Confirmed </label>  <br><br>
+        Select Phone numbers :- <br>
+                      <input style="padding-left: 50%;" type="checkbox" name="0303" id="" class="a"> 0303 <br>
+                      <input type="checkbox" name="0313" id="" class="a"> 0313 <br>
+                      <input type="checkbox" name="0323" id="" class="a"> 0323 <br>
+                      <input type="checkbox" name="0333" id="" class="a"> 0333 <br>
+                      <input type="checkbox" name="0345" id="" class="a"> 0345 <br> <br>
+        <input style="padding-left: 0%;" type="button" value="Check Validations">
+        <input type="submit" value="Submit">
+
+        <br><br><label for="se">
+            Select Network you use :-
+        </label>
+        <select name="Networks" id="se">
+            <option value="Jazz">Jazz</option>
+            <option value="Zong">Zong</option>
+            <option value="Warid">Warid</option>
+            <option value="Ufone">Ufone</option>
+            <option value="Telenor"> Telenor</option>
+
+        </select><br><br>
+        <label for="jr">Jazz Network</label>
+        <select name="jazzref" id="jr">
+            <optgroup label="Jazz numbers">
+                <option value="0300">0300</option>
+                <option value="0301">0301</option>
+                <option value="0302">0302</option>
+            </optgroup>
+            <optgroup label="Warid numbers">
+                <option value="0320">0320</option>
+                <option value="0321">0321</option>
+                <option value="0322">0322</option>  
+
+            </optgroup>
+        </select>
+    </form>
+</body>
+</html>

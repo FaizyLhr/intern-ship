@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Creation</title>
+
+</head>
+
+<body>
+    <div>
+        <p id="p1">
+            sxhjgxjh
+        </p>
+    </div>
+
+
+    <script type="text/javascript">
+
+        //DOM Creation
+        DomCrt = () => {
+            var a = document.createElement("p");
+            var b = document.createTextNode("Chutti Kr");
+            var c = document.createComment("This is Practice !");
+            console.log(a);
+            console.log(b);
+            console.log(c);
+            // document.write(a);
+            // document.write(b);
+            // document.write(c);
+        }
+        // DomCrt();
+
+        //DOM Append
+        DOMApp = () => {
+            var a = document.createElement("h1");
+            var b = document.createTextNode("Chutti Kr");
+            //Appending Text in Tag
+            a.appendChild(b);
+            // console.log(a); 
+        }
+        Apeend = () => {
+            //Appending Text to Body
+            // document.body.appendChild(a);
+
+            //Add adjacent Element
+            //Adding Elements
+            var ele = document.createElement("h1");
+            //ele.setAttribute("")
+            var eledata = document.createTextNode("Heading!!");
+            //Appending Text with Tag
+            ele.appendChild(eledata);
+            document.body.appendChild(eledata);
+            // console.log(integ);
+
+            //Using Method
+            //var tar = document.getElementById("p1");
+            //tar.insertAdjacentElement('afterbegin', ele);
+            document.body.insertAdjacentElement('afterbegin', ele);
+        }
+
+
+        //Adjacent HTML Method
+        adjhtml = () => {
+            //Element to br added
+            var newe = "<button>Click</button>";
+            document.getElementById("p1").insertAdjacentHTML("afterbegin",newe);
+
+        }
+
+        //Adjacent Text
+        adjtxt=()=>{
+            var newwl="Adjacent text";
+            document.getElementById("p1").insertAdjacentText("afterend",newwl);
+        }
+        adjtxt();
+        //DOMApp();
+
+
+    </script>
+</body>
+
+</html>

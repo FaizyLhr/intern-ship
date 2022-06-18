@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Each and For in Loop</title>
+    <script type="text/javascript">
+
+        // dummyFunction = (gggg) => {
+
+        // }
+
+        // djf = () => {
+
+        // }
+
+        // arr.forEach=()=>{
+
+        // }
+
+        // array.forEach(element => {
+
+        // });
+
+        //for Each Loop
+        function ForeachLop() {
+            var arr = ["ali", "ahmd", "numan", "sulman", "nikl"];
+
+            //for each loop
+            arr.forEach((value, index) => {
+                document.write("" + element + "<br>");
+            })
+            //Another method for foreach loop
+            arr.forEach(element => {
+                document.write("" + element + "<br>");
+            });
+            document.write("<br><br>");
+
+            //Another method for foreach loop
+            arr.forEach(function (value, index) {
+                document.write(index + "  " + value + "<br>");
+            });
+
+
+            function arrcall(value) {
+                document.write(value + "<br>");
+
+            }
+
+            //Another method for foreach loop
+            document.write("<br>")
+            arr.forEach(arrcall);
+        }
+
+        ForinLop = () => {
+            //object Declaration
+            var person = {
+                fnm: "faizy",
+                age: 21,
+                sex: "male"
+            };
+
+            //declaring another object
+            var per = new Object();
+            per.fnam = "ali";
+            per.agi = 67;
+            per.sexi = "male";
+
+            //loop for reading all values
+            //for obj1
+            for (const i in person) {
+                // const element = object[i];
+                document.write(i + "   :  " + person[i] + "" + "<br>");
+
+                // if (Object.hasOwnProperty.call(object, i)) {
+                //     const element = object[i];
+
+                // }
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <br>
+    <button onclick="ForeachLop()">For Each Loop</button>
+    <br>
+    <br>
+    <button onclick="ForinLop()">For In Loop</button>
+
+</body>
+
+</html>

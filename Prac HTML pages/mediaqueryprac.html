@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <style>
+        #s1
+        {
+            background-color: blue;
+            display: flex;
+        }
+        p
+        {
+            font-size: 30px;
+        }
+        #s2
+        {
+            display: flex;
+        }
+        #s3
+        {
+            
+            display: flex;
+        }
+        .d
+        {
+            width: 50%;
+            height: 200px;
+            background-color: chartreuse;
+        }
+        .d1
+        {
+            width: 50%;
+            height: 200px;
+            background-color: gold;
+        }
+        body
+        {
+            margin: 0px;
+        }
+        @media screen and (max-width: 900px) {
+        p{
+                width: 100%;
+                font-size: 20px;
+                background-color: black;
+                color:  white;
+            }
+        }
+        @media screen and (max-width: 500px) {
+            p
+            {
+                font-size: 10px;
+                background-color: violet;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <section id="s1">
+        <div id="s1d1">
+            <p>
+                var pressTimer;
+
+$("a").mouseup(function(){
+  clearTimeout(pressTimer);
+  // Clear timeout
+  return false;
+}).mousedown(function(){
+  // Set timeout
+  pressTimer = window.setTimeout(function() { ... Your Code ...},1000);
+  return false; 
+});
+            </p>
+        </div>
+    </section>
+    <section id="s2">
+        var pressTimer;
+
+$("a").mouseup(function(){
+  clearTimeout(pressTimer);
+  // Clear timeout
+  return false;
+}).mousedown(function(){
+  // Set timeout
+  pressTimer = window.setTimeout(function() { ... Your Code ...},1000);
+  return false; 
+});
+    </section>
+    <section id="s3">
+        <div class="d">
+            <p>
+                var pressTimer;
+
+$("a").mouseup(function(){
+  clearTimeout(pressTimer);
+  // Clear timeout
+  return false;
+}).mousedown(function(){
+  // Set timeout
+  pressTimer = window.setTimeout(function() { ... Your Code ...},1000);
+  return false; 
+});
+            </p>
+        </div>
+        <div class="d1">
+            <p>var pressTimer;
+
+                $("a").mouseup(function(){
+                  clearTimeout(pressTimer);
+                  // Clear timeout
+                  return false;
+                }).mousedown(function(){
+                  // Set timeout
+                  pressTimer = window.setTimeout(function() { ... Your Code ...},1000);
+                  return false; 
+                });</p>
+        </div>
+    </section>
+</body>
+</html>
